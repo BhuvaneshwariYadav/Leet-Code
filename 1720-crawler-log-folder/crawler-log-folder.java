@@ -5,13 +5,13 @@ class Solution {
         int k=1;
         for(String i:logs)
         {
-            if(Character.isLetterOrDigit(i.charAt(0)))
+            if(i.charAt(0)!='.')
             {
                 st.push(k+"");
                 k++;
                 ans++;
             }
-            if(i.charAt(1)=='.' && !st.isEmpty())
+            if(i.charAt(1)=='.' && ans!=0)
             {
                 st.pop();
                 ans--;
